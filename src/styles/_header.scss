@@ -1,11 +1,18 @@
+@use '_variables';
+
 .header{
-    background-image: url('https://i.pinimg.com/1200x/58/c7/4a/58c74a66ace4f9e8df7e4f4c7bd8bd7c.jpg');
+    background-image: url('https://img.freepik.com/fotos-gratis/vista-superior-disposicao-dos-elementos-de-aniversario_23-2148726083.jpg?t=st=1745862348~exp=1745865948~hmac=6166554f98060def54deb4dedff70ee615d44b9bdcf65fdb239c812eaf2b4838&w=1060');
     background-repeat: no-repeat;
     background-size: cover ;
     position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
+    font-family: variables.$fontCitacao;
+    color: variables.$corTertiary;
     height: 100vh;
+    box-shadow: inset 0px -20px 20px 20px variables.$corSecundary;
+
+    @media (max-width:1024px){
+        height: 90vh;
+    }
 
     &::before{
         position: absolute;
@@ -13,9 +20,9 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #000000;
+        background-color: variables.$corSecundary;
         content: " ";
-        opacity: .95;
+        opacity: .98;
     }
 }
 
@@ -24,15 +31,21 @@
     align-items: center;
     justify-content: space-between;
     padding: 16px 0 ;
+
+    @media (max-width:640px){
+        flex-direction: column;
+        gap: 20px;
+    }
     
     &__list{
         text-align: center;
-        
         &__item{
-            font-family: 'Action_comic_black';
-
+            font-family: variables.$fontPrincipalNav;
+            font-size: 30px;
+            color: variables.$corTertiary;
             &:first-child{
-                font-family: 'Action_comic';
+                font-family: 'Permanent Marker';
+                color: variables.$corPrimary;
             }
         }
     }
@@ -40,13 +53,17 @@
 
 .citacao{
     padding: 40px 0;
-
     &__text{
         text-transform: uppercase;
         text-align: center;
         font-weight: bold;
         font-size: 36px;
-        margin-bottom: 3%;
+        margin: 40px 0;
+
+        @media (max-width:640px){
+            font-size: 20px;
+            margin: 0;
+        }
     }
 }
 
@@ -55,18 +72,30 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    @media (max-width:640px){
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        gap: 20px;
+    }
 
     &__text{
         height: 100%;
         font-size: 28px ;
         width: 60%;
+        font-family: variables.$fontPrincipal;
+
+        @media (max-width:640px){
+            font-size: 16px;
+            width: 100%;
+        }
     }
 
     &__infos{
         font-size: 20px;
         padding: 0 40px;
-        background-color: #fff;
-        border: 1px solid black;
+        background-color: variables.$corTertiary;
+        border: 1px solid variables.$corSecundary;
         border-radius: 12px;
         &__list{
             text-align: center;

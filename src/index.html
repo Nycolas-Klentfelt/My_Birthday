@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Birthday</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./styles/main.scss">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header class="header">
@@ -27,7 +34,7 @@
                     <ul class="CTA__infos__list">
                         <li class="CTA__infos__list__item">
                             <h3><b>Localização</b></h3>
-                            <p>ajshndfkjasbfjabs</p>
+                            <p>Neo Química Arena</p>
                         </li>
                         <li class="CTA__infos__list__item">
                             <h3><b>Horário</b></h3>
@@ -42,58 +49,102 @@
             </div>
         </div>
     </header>
+    <section class="event">
+        <div class="container">
+            <h2 class="event__title">Convidados especiais</h2>
+            <div class="event__attractions">
+                <h3 class="event__attractions__title">
+                    Jorge e Matheus
+                </h3>
+                <ul class="event__attractions__list" data-aos="fade-left">
+                    <li class="event__attractions__list__item" >
+                        <img class="event__attractions__list__item__image"  src="https://i.pinimg.com/736x/3f/bd/f5/3fbdf545164bd7e7f032ccc3b32e6f37.jpg" alt="front-end">
+                    </li>
+                    <li class="event__attractions__list__item">
+                        <p class="event__attractions__list__item__text">Uma celebração inesquecível pede grandes momentos e contará com a presença de Jorge e Mateus como uma das atrações da noite! A dupla, referência do sertanejo nacional, trará seus grandes sucessos para animar ainda mais a festa, em meio a muitas outras surpresas, alegria e boa música.</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="event__attractions">
+                <h3 class="event__attractions__title">
+                    MC IG
+                </h3>
+                <ul data-aos="fade-right" class="event__attractions__list event--image-right">
+                    <li class="event__attractions__list__item">
+                        <img class="event__attractions__list__item__image"  src="https://i.pinimg.com/736x/04/f1/bd/04f1bd9e7d532aa0c7cd25099fdad68a.jpg" alt="front-end">
+                    </li>
+                    <li class="event__attractions__list__item">
+                        <p class="event__attractions__list__item__text">A festa de aniversário promete ser ainda mais vibrante com a energia contagiante de MC IG! Trazendo suas batidas marcantes e letras que são sucesso por onde passam, o artista chega para levantar a galera e garantir que ninguém fique parado. Mais uma atração imperdível em uma noite repleta de música, celebração e momentos inesquecíveis</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="event__attractions">
+                <h3 class="event__attractions__title">
+                    System of a Down
+                </h3>
+                <ul data-aos="fade-left" class="event__attractions__list">
+                    <li class="event__attractions__list__item">
+                        <img class="event__attractions__list__item__image"  src="https://i.pinimg.com/736x/26/e6/b3/26e6b32512f919f59c2d9939242a7850.jpg" alt="front-end">
+                    </li>
+                    <li class="event__attractions__list__item">
+                        <p class="event__attractions__list__item__text">Para tornar esta celebração simplesmente histórica, a atração principal da noite será ninguém menos que System of a Down! Com sua energia explosiva, riffs poderosos e clássicos que marcaram gerações, a banda promete transformar o aniversário em um verdadeiro espetáculo. Prepare-se para uma experiência intensa e memorável ao som de um dos maiores nomes do rock mundial!</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
     <div class="timer">
         <ul class="timer__list">
-            <li class="timer__list__item">
+            <li class="timer__list__item box1">
                 <p class="timer__text">
                     contagem regressiva 
                 </p>
             </li>
-            <li class="timer__list__item">
+            <li class="timer__list__item box2">
                 <ul class="contador">
                     <li class="contador__item1">dias</li>
                     <li id="dia" class="contador__item2">00</li>
                 </ul>
             </li>
-            <li class="timer__list__item">
+            <li class="timer__list__item box3">
                 <p class="timer__text">
                     : 
                 </p>
             </li>
-            <li class="timer__list__item">
+            <li class="timer__list__item box4">
                 <ul class="contador">
                     <li class="contador__item1">Horas</li>
                     <li id="hora" class="contador__item2">00</li>
                 </ul>
             </li>
-            <li class="timer__list__item">
+            <li class="timer__list__item box5">
                 <p class="timer__text">
                     : 
                 </p>
             </li>
-            <li class="timer__list__item">
+            <li class="timer__list__item box6">
                 <ul class="contador">
                     <li class="contador__item1">Minutos</li>
                     <li id="minuto" class="contador__item2">00</li>
                 </ul>
             </li>
-            <li class="timer__list__item">
+            <li class="timer__list__item box7">
                 <p class="timer__text">
                     : 
                 </p>
             </li>
-            <li class="timer__list__item">
+            <li class="timer__list__item box8">
                 <ul class="contador">
                     <li class="contador__item1">Segundos</li>
                     <li id="segundo" class="contador__item2">00</li>
                 </ul>
             </li>
-            <li class="timer__list__item">
-                <a href="#" class="timer__button button">Confirmar presença</a>
+            <li class="timer__list__item box9">
+                <a href="#" class="timer__button ">Confirmar presença</a>
             </li>
         </ul>
     </div>
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./scripts/main.js"></script>
 </body>
 </html>

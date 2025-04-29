@@ -1,41 +1,88 @@
+@use '_variables';
+
 .timer{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 0, 0);
+    background-color: variables.$corPrimary;
     display: flex;
     justify-content: space-around;
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0 10px 0;
     z-index: 1;
-    
+    @media (max-width:640px){
+        padding: 10px 0;
+    }
 
     &__text{
         font-size: 28px;
-        color: #fff;
+        font-weight: 600;
+        color:variables.$corTertiary;
+        @media (max-width:640px){
+            font-size: 18px;
+        }
     }
 
     &__list{
         display: flex;
         align-items: center;
         gap: 16px;
+
+        @media (max-width:640px){
+            display: grid;
+            gap: 0;
+            width: 100%;
+        }
+
+        @media (max-width:1024px){
+            text-align: center;
+            gap: 10px;
+            justify-content: space-around;
+        }
+
         &__item{
             display: flex;
             align-items: center;
             flex-direction: column;
-            color: #fff;
+            color: variables.$corTertiary;
             font-size: 12px;
             text-transform: uppercase;
+        }
+    }
+
+    &__button{
+        padding: 16px;
+        font-family: variables.$fontPrincipal;
+        font-weight: bold;
+        font-size: 18px;
+        color: variables.$corSecundary;
+        background-color: variables.$corTertiary;
+        text-decoration: none;
+        text-transform: uppercase ;
+        border: 1px solid variables.$corSecundary;
+        border-radius: 4px;
+        @media (max-width:1024px){
+            margin-right: 20px;
         }
     }
 }
 
 .contador{
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media (max-width:640px){
+        margin: 0;
+    }
     &__item1{
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (max-width:640px){
+            font-size: 10px;
+            margin-bottom: 2px;
+        }
     }
 
     &__item2{
@@ -43,11 +90,76 @@
         justify-content: center;
         align-items: center;
         font-size: 32px;
-        background-color: rgb(31, 31, 31);
+        background-color: variables.$corSecundary;
         border-radius: 2px;
         width: 60px;
         height: 50px;
         margin-bottom: 15px;
+
+        @media (max-width:640px){
+            margin: 0;
+            font-size: 18px;
+            width: 40px;
+            height: 30px;
+        }
     }
     
+}
+
+@media (max-width:640px){
+    .box1{
+        grid-column-start: 1;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        margin-bottom: 10px;
+    }
+    .box2{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .box3{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .box4{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .box5{
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .box6{
+        grid-column-start: 5;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .box7{
+        grid-column-start: 6;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    .box8{
+        grid-column-start: 7;
+        grid-column-end: 7;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+}
+
+@media (max-width:835px){
+    .box9{
+        display: none;
+    }
 }
